@@ -5,7 +5,7 @@ using System.Text;
 namespace Entidades
 {
     //Clase que hereda de Registro
-    class RegistroMarchamo
+    public class RegistroMarchamo
     {
         //Atributos
         private decimal valorVehicular;

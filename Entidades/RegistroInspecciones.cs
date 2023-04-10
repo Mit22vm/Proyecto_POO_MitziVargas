@@ -5,7 +5,7 @@ using System.Text;
 namespace Entidades
 {
     //Clase que hereda de Registro
-    class RegistroInspecciones
+    public class RegistroInspecciones
     {
            //Atributos
             private DateTime fechaProxima;

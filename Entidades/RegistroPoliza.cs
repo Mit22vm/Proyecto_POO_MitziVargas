@@ -5,7 +5,7 @@ using System.Text;
 namespace Entidades
 {
     //Clase que hereda de Registro
-    class RegistroPoliza
+    public class RegistroPoliza
     {
         //Atributos
         private DateTime fechaInicio;
