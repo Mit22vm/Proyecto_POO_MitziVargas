@@ -14,6 +14,7 @@ namespace Entidades
         private string telefono1;
         private string telefono2;
         private string email;
+        private bool existe;
 
 
         //Propiedades de la clase
@@ -51,6 +52,11 @@ namespace Entidades
         {
             get => email;
             set => email = value;
+        }
+        public bool Existe
+        {
+            get => existe;
+            set => existe = value;
         }
 
         //Método constructor vacío

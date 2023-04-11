@@ -42,6 +42,6 @@ namespace AccesoDatos
             }
 
             return numGiras;
-        }
+        }//fin función
     }
 }

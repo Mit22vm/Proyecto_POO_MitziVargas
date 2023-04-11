@@ -50,8 +50,8 @@ namespace Proyecto_POO_MitziVargas
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaActual = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFechaSalida = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -105,6 +105,8 @@ namespace Proyecto_POO_MitziVargas
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.btnVerTipo = new System.Windows.Forms.Button();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -236,6 +238,8 @@ namespace Proyecto_POO_MitziVargas
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTipo);
+            this.groupBox1.Controls.Add(this.btnVerTipo);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label9);
@@ -245,8 +249,8 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTimePickerFechaActual);
+            this.groupBox1.Controls.Add(this.dateTimePickerFechaSalida);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 65);
@@ -259,14 +263,14 @@ namespace Proyecto_POO_MitziVargas
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(175, 499);
+            this.comboBox1.Location = new System.Drawing.Point(152, 499);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(119, 21);
             this.comboBox1.TabIndex = 17;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(44, 265);
+            this.textBox4.Location = new System.Drawing.Point(44, 285);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(315, 61);
@@ -275,7 +279,7 @@ namespace Proyecto_POO_MitziVargas
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(43, 219);
+            this.label9.Location = new System.Drawing.Point(43, 242);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 13);
             this.label9.TabIndex = 15;
@@ -284,7 +288,7 @@ namespace Proyecto_POO_MitziVargas
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(73, 502);
+            this.label8.Location = new System.Drawing.Point(63, 502);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 14;
@@ -292,14 +296,14 @@ namespace Proyecto_POO_MitziVargas
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(235, 158);
+            this.textBox2.Location = new System.Drawing.Point(235, 189);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(124, 20);
             this.textBox2.TabIndex = 12;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 158);
+            this.textBox1.Location = new System.Drawing.Point(46, 189);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 20);
             this.textBox1.TabIndex = 11;
@@ -315,7 +319,7 @@ namespace Proyecto_POO_MitziVargas
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(232, 131);
+            this.label6.Location = new System.Drawing.Point(232, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 9;
@@ -324,27 +328,27 @@ namespace Proyecto_POO_MitziVargas
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 127);
+            this.label5.Location = new System.Drawing.Point(43, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Origen";
             // 
-            // dateTimePicker2
+            // dateTimePickerFechaActual
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(235, 63);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(85, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dateTimePickerFechaActual.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaActual.Location = new System.Drawing.Point(235, 63);
+            this.dateTimePickerFechaActual.Name = "dateTimePickerFechaActual";
+            this.dateTimePickerFechaActual.Size = new System.Drawing.Size(85, 20);
+            this.dateTimePickerFechaActual.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateTimePickerFechaSalida
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(46, 63);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePickerFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFechaSalida.Location = new System.Drawing.Point(46, 63);
+            this.dateTimePickerFechaSalida.Name = "dateTimePickerFechaSalida";
+            this.dateTimePickerFechaSalida.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePickerFechaSalida.TabIndex = 2;
             // 
             // label2
             // 
@@ -848,6 +852,22 @@ namespace Proyecto_POO_MitziVargas
             this.button14.Text = "button14";
             this.button14.UseVisualStyleBackColor = true;
             // 
+            // btnVerTipo
+            // 
+            this.btnVerTipo.Location = new System.Drawing.Point(46, 107);
+            this.btnVerTipo.Name = "btnVerTipo";
+            this.btnVerTipo.Size = new System.Drawing.Size(75, 23);
+            this.btnVerTipo.TabIndex = 17;
+            this.btnVerTipo.Text = "Ver tipo";
+            this.btnVerTipo.UseVisualStyleBackColor = true;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(148, 107);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(172, 20);
+            this.txtTipo.TabIndex = 18;
+            // 
             // FrmSolicitudGira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -905,8 +925,8 @@ namespace Proyecto_POO_MitziVargas
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaActual;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFechaSalida;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -961,5 +981,7 @@ namespace Proyecto_POO_MitziVargas
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.Button btnVerTipo;
     }
 }
