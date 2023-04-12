@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace AccesoDatos
 {
-    class AD_Funcionario
+    public class AD_Funcionario
     {
         private string _cadenaConexion;
 

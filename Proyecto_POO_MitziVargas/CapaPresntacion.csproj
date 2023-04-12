@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZIDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFuncionarios.Designer.cs">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicioMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmFuncionarios.resx">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicioMenu.resx">
       <DependentUpon>FrmInicioMenu.cs</DependentUpon>
     </EmbeddedResource>

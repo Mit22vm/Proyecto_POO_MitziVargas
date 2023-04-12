@@ -25,12 +25,11 @@ namespace Proyecto_POO_MitziVargas.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-BQM0IO4;Initial Catalog=FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZI" +
             ";Integrated Security=True")]
-        public string FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZIConnectionString {
+        public string ConnectionString {
             get {
-                return ((string)(this["FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZIConnectionString"]));
+                return ((string)(this["ConnectionString"]));
             }
         }
     }

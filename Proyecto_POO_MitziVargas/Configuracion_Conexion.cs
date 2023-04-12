@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace Proyecto_POO_MitziVargas
 {
-    class Configuracion_Conexion
+    public static class Configuracion_Conexion
     {
-        public static string getConexionString
+        //internal static string getConnectionString;
+
+        public static string getConnectionString
         {
             get
             {
-                return Properties.Settings.Default.FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZIConnectionString;
+                return Properties.Settings.Default.ConnectionString;
+                    
             }
         }
     }

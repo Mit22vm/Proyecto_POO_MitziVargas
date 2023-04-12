@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Entidades;
+
 
 namespace Proyecto_POO_MitziVargas
 {
@@ -29,7 +31,7 @@ namespace Proyecto_POO_MitziVargas
 
         private void FrmSolicitudGira_Load(object sender, EventArgs e)
         {
-            logica.CadenaConexion = Configuracion_Conexion.getConexionString; //levantar la conexion de la bd a logica
+            logica.CadenaConexion = Configuracion_Conexion.getConnectionString; //levantar la conexion de la bd a logica
             txtIdGira.Text = logica.identificadorGirasSiguientes().ToString();
         }
         //FECHAS
@@ -77,5 +79,61 @@ namespace Proyecto_POO_MitziVargas
             txtTipo.Text = resultado;
 
         }//FIN BOTON
+
+
+        //Boton de Buscar funcionarios
+        private void btnBuscarFuncionario_Click(object sender, EventArgs e)
+        {
+            FrmFuncionarios frm = new FrmFuncionarios();
+            frm.AceptarFuncionario += new EventHandler(AceptarFuncionario);
+            frm.Show(this);
+        }
+
+
+        //Aceptar Funcionario
+        private void AceptarFuncionario(object id, EventArgs e)
+        {
+            try
+            {
+                int id_Funcionario = (int)id;
+                if (id_Funcionario > -1)
+                {
+                    BuscarFuncionario(id_Funcionario);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+      
+
+        //Buscar Funcionario
+        private void BuscarFuncionario(int id)
+        {
+            Funcionario funcionario;
+            LN_Funcionario logica = new LN_Funcionario(Configuracion_Conexion.getConnectionString);
+
+            string condicion = $"Id={id}";
+            try
+            {
+                funcionario = logica.ObtenerFuncionario(condicion);
+                if (funcionario.Existe)
+                {
+                    txtFuncionario.Tag = funcionario.Id_Cedula.ToString();
+                    txtFuncionario.Text = $"{funcionario.Nombre} {funcionario.Apellido1}";
+                }
+                else
+                {
+                    MessageBox.Show("Imposible cargar el cliente ya que ha tenido cambios", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

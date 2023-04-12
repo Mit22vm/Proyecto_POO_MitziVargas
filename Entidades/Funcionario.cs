@@ -16,7 +16,13 @@ namespace Entidades
         private string email;
         private bool existe;
 
-
+        public string NombreCompleto
+        {
+            get
+            {
+                return $"{nombre} {apellido1}";
+            }
+        }
         //Propiedades de la clase
         public string Id_Cedula
         {
