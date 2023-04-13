@@ -17,8 +17,9 @@ namespace Entidades
         private int modelo;
         private int cilindrada;
         private string estadoVehiculo;
-        private int cantidadPasajeros;
+        private int capacidadPasajeros;
         private string tipoVehiculo;
+        private bool existe;
 
         //Propiedades
         public int Id_Placa
@@ -71,16 +72,23 @@ namespace Entidades
             get => estadoVehiculo;
             set => estadoVehiculo = value;
         }
-        public int CantidadPasajeros
+        public int CapacidadPasajeros
         {
-            get => cantidadPasajeros;
-            set => cantidadPasajeros = value;
+            get => capacidadPasajeros;
+            set => capacidadPasajeros = value;
         }
         public string TipoVehiculo
         {
             get => tipoVehiculo;
             set => tipoVehiculo = value;
         }
+
+        public bool Existe
+        {
+            get => existe;
+            set => existe = value;
+        }
+
         //Método constructor vacío
         public Vehiculo()
         {
@@ -94,8 +102,9 @@ namespace Entidades
             modelo = 0;
             cilindrada = 0;
             estadoVehiculo = string.Empty;
-            cantidadPasajeros = 0;
+            capacidadPasajeros = 0;
             tipoVehiculo = string.Empty;
+            
         }
     }
 }

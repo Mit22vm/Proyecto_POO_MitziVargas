@@ -10,19 +10,18 @@ using System.Windows.Forms;
 using Entidades;
 using Logica;
 
-
 namespace Proyecto_POO_MitziVargas
 {
-    public partial class FrmFuncionarios : Form
+    public partial class FrmFuncionarioChofer : Form
     {
-        
         public event EventHandler AceptarFuncionario;
         //evento
 
         private int id_Funcionario = 0;
         public string id = string.Empty;
         public string nombre = string.Empty;
-        public FrmFuncionarios()
+
+        public FrmFuncionarioChofer()
         {
             InitializeComponent();
         }
@@ -34,10 +33,10 @@ namespace Proyecto_POO_MitziVargas
             try
             {
                 lista = logica.ListarFuncionarios(condicion);
-                
+
                 grdListaFun.DataSource = lista;
 
-                
+
             }
             catch (Exception e)
             {
@@ -45,7 +44,6 @@ namespace Proyecto_POO_MitziVargas
                 throw e;
             }
         }
-
 
         private void SeleccionarFuncionarios()
         {
@@ -65,17 +63,16 @@ namespace Proyecto_POO_MitziVargas
 
                 throw e;
             }
-
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscarChofer_Click(object sender, EventArgs e)
         {
             string condicion = string.Empty;
             try
             {
-                if (!string.IsNullOrEmpty(txtNombre.Text))
+                if (!string.IsNullOrEmpty(txtNombreChofer.Text))
                 {
-                    condicion = $"concat(nombre,' ',APELLIDO) like '%{txtNombre.Text}%'";
+                    condicion = $"concat(nombre,' ',APELLIDO) like '%{txtNombreChofer.Text}%'";
                 }
                 cargarFuncionario(condicion);
 
@@ -87,20 +84,7 @@ namespace Proyecto_POO_MitziVargas
             }
         }
 
-        //private void FrmFuncionarios_Load(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        cargarFuncionario("");
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
-        private void grdLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void grdListaFun_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -133,14 +117,14 @@ namespace Proyecto_POO_MitziVargas
             Close();
         }
 
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void FrmFuncionarioChofer_Load(object sender, EventArgs e)
         {
             string condicion = string.Empty;
             try
             {
-                if (!string.IsNullOrEmpty(txtNombre.Text))
+                if (!string.IsNullOrEmpty(txtNombreChofer.Text))
                 {
-                    condicion = $"concat(nombre,' ',APELLIDO) like '%{txtNombre.Text}%'";
+                    condicion = $"concat(nombre,' ',APELLIDO) like '%{txtNombreChofer.Text}%'";
                 }
                 cargarFuncionario(condicion);
 
@@ -152,26 +136,7 @@ namespace Proyecto_POO_MitziVargas
             }
         }
 
-        private void FrmFuncionarios_Load(object sender, EventArgs e)
-        {
-            string condicion = string.Empty;
-            try
-            {
-                if (!string.IsNullOrEmpty(txtNombre.Text))
-                {
-                    condicion = $"concat(nombre,' ',APELLIDO) like '%{txtNombre.Text}%'";
-                }
-                cargarFuncionario(condicion);
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void grdListaFun_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void grdListaFun_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -184,17 +149,6 @@ namespace Proyecto_POO_MitziVargas
             }
         }
 
-        private void btnAceptar_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                SeleccionarFuncionarios();
-            }
-            catch (Exception ex)
-            {
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }
