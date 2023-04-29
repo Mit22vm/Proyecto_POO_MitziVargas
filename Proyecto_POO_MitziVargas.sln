@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33328.57
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresntacion", "Proyecto_POO_MitziVargas\CapaPresntacion.csproj", "{E19A34C9-1779-4F72-83CC-E5AD517089A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{7D0A6E29-9AB9-4E40-A77F-23E4D7E25AF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{7D0A6E29-9AB9-4E40-A77F-23E4D7E25AF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{0B036C5B-8FDF-4C92-A339-658A586F275D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{0B036C5B-8FDF-4C92-A339-658A586F275D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{23EA3B78-2C36-42F6-95E1-F14678E624C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logica", "Logica\Logica.csproj", "{23EA3B78-2C36-42F6-95E1-F14678E624C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto_WEB_Gira", "Proyecto_WEB_Gira\Proyecto_WEB_Gira.csproj", "{9F744F35-E6F1-43C6-9AB5-1ECEA4D9B235}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{23EA3B78-2C36-42F6-95E1-F14678E624C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23EA3B78-2C36-42F6-95E1-F14678E624C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23EA3B78-2C36-42F6-95E1-F14678E624C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F744F35-E6F1-43C6-9AB5-1ECEA4D9B235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F744F35-E6F1-43C6-9AB5-1ECEA4D9B235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F744F35-E6F1-43C6-9AB5-1ECEA4D9B235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F744F35-E6F1-43C6-9AB5-1ECEA4D9B235}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

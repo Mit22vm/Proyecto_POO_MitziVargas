@@ -15,13 +15,14 @@ namespace Proyecto_POO_MitziVargas
 {
     public partial class FrmFuncionarios : Form
     {
-        
+
         public event EventHandler AceptarFuncionario;
         //evento
 
         private int id_Funcionario = 0;
         public string id = string.Empty;
         public string nombre = string.Empty;
+        public string estado = "";
         public FrmFuncionarios()
         {
             InitializeComponent();
@@ -34,10 +35,10 @@ namespace Proyecto_POO_MitziVargas
             try
             {
                 lista = logica.ListarFuncionarios(condicion);
-                
+
                 grdListaFun.DataSource = lista;
 
-                
+
             }
             catch (Exception e)
             {
@@ -56,6 +57,14 @@ namespace Proyecto_POO_MitziVargas
                     id_Funcionario = Convert.ToInt32(grdListaFun.SelectedRows[0].Cells[2].Value);
                     id = grdListaFun.SelectedRows[0].Cells[2].Value.ToString();
                     nombre = grdListaFun.SelectedRows[0].Cells[1].Value.ToString();
+                    estado = grdListaFun.SelectedRows[0].Cells[1].Value.ToString();
+
+                    if (estado != "Disponible")
+                    {
+                        MessageBox.Show("El funcionario seleccionado no se encuentra disponible (" + estado + ")", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
                     AceptarFuncionario(id_Funcionario, null);
                     Close();
                 }

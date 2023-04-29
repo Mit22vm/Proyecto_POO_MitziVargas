@@ -52,8 +52,6 @@ namespace Proyecto_POO_MitziVargas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.btnVerTipo = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -95,25 +93,7 @@ namespace Proyecto_POO_MitziVargas
             this.lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtNombrePasajero = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.grdLista = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -126,9 +106,6 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLugaresVisita)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdLista)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -144,6 +121,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             this.txtFuncionario.Location = new System.Drawing.Point(140, 32);
             this.txtFuncionario.Name = "txtFuncionario";
+            this.txtFuncionario.ReadOnly = true;
             this.txtFuncionario.Size = new System.Drawing.Size(230, 20);
             this.txtFuncionario.TabIndex = 3;
             // 
@@ -151,6 +129,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             this.txtFuncionarioChofer.Location = new System.Drawing.Point(140, 128);
             this.txtFuncionarioChofer.Name = "txtFuncionarioChofer";
+            this.txtFuncionarioChofer.ReadOnly = true;
             this.txtFuncionarioChofer.Size = new System.Drawing.Size(230, 20);
             this.txtFuncionarioChofer.TabIndex = 8;
             // 
@@ -173,7 +152,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 452);
+            this.button1.Location = new System.Drawing.Point(511, 590);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;
@@ -182,7 +161,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(235, 452);
+            this.button2.Location = new System.Drawing.Point(630, 590);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 14;
@@ -203,11 +182,10 @@ namespace Proyecto_POO_MitziVargas
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(21, 23);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(801, 601);
+            this.tabControl1.Size = new System.Drawing.Size(801, 549);
             this.tabControl1.TabIndex = 16;
             // 
             // tabPage1
@@ -222,7 +200,7 @@ namespace Proyecto_POO_MitziVargas
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(793, 575);
+            this.tabPage1.Size = new System.Drawing.Size(793, 523);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos gira";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -231,6 +209,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             this.txtIdGira.Location = new System.Drawing.Point(212, 14);
             this.txtIdGira.Name = "txtIdGira";
+            this.txtIdGira.ReadOnly = true;
             this.txtIdGira.Size = new System.Drawing.Size(59, 20);
             this.txtIdGira.TabIndex = 19;
             // 
@@ -250,7 +229,7 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(398, 65);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(380, 492);
+            this.groupBox2.Size = new System.Drawing.Size(380, 415);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de informacion de funcionarios";
@@ -278,6 +257,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             this.txtVehiculo.Location = new System.Drawing.Point(140, 253);
             this.txtVehiculo.Name = "txtVehiculo";
+            this.txtVehiculo.ReadOnly = true;
             this.txtVehiculo.Size = new System.Drawing.Size(196, 20);
             this.txtVehiculo.TabIndex = 21;
             // 
@@ -351,15 +331,11 @@ namespace Proyecto_POO_MitziVargas
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtTipo);
             this.groupBox1.Controls.Add(this.btnVerTipo);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -370,33 +346,16 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(15, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 492);
+            this.groupBox1.Size = new System.Drawing.Size(377, 415);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de información de gira";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(235, 148);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Hora de llegada";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Hora Salida";
             // 
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(148, 107);
             this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(172, 20);
             this.txtTipo.TabIndex = 18;
             // 
@@ -412,7 +371,7 @@ namespace Proyecto_POO_MitziVargas
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(46, 361);
+            this.textBox4.Location = new System.Drawing.Point(46, 264);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(315, 61);
@@ -421,7 +380,7 @@ namespace Proyecto_POO_MitziVargas
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(43, 312);
+            this.label9.Location = new System.Drawing.Point(43, 237);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 13);
             this.label9.TabIndex = 15;
@@ -429,14 +388,14 @@ namespace Proyecto_POO_MitziVargas
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(235, 253);
+            this.textBox2.Location = new System.Drawing.Point(224, 177);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(124, 20);
             this.textBox2.TabIndex = 12;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 253);
+            this.textBox1.Location = new System.Drawing.Point(46, 177);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 20);
             this.textBox1.TabIndex = 11;
@@ -452,7 +411,7 @@ namespace Proyecto_POO_MitziVargas
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(232, 218);
+            this.label6.Location = new System.Drawing.Point(232, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 9;
@@ -461,7 +420,7 @@ namespace Proyecto_POO_MitziVargas
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 218);
+            this.label5.Location = new System.Drawing.Point(43, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 8;
@@ -507,7 +466,7 @@ namespace Proyecto_POO_MitziVargas
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(793, 575);
+            this.tabPage2.Size = new System.Drawing.Size(793, 552);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Horarios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -526,7 +485,7 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Location = new System.Drawing.Point(89, 58);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(586, 461);
+            this.groupBox3.Size = new System.Drawing.Size(586, 339);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información de horarios";
@@ -631,7 +590,7 @@ namespace Proyecto_POO_MitziVargas
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(793, 575);
+            this.tabPage3.Size = new System.Drawing.Size(793, 552);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lugares de visita";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -774,184 +733,24 @@ namespace Proyecto_POO_MitziVargas
             this.distrito.Name = "distrito";
             this.distrito.Width = 160;
             // 
-            // tabPage4
+            // label4
             // 
-            this.tabPage4.Controls.Add(this.button12);
-            this.tabPage4.Controls.Add(this.button11);
-            this.tabPage4.Controls.Add(this.button10);
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(793, 575);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Pasajeros";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(437, 480);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "Eliminar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(302, 481);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Agregar";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(586, 481);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Buscar";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.txtNombrePasajero);
-            this.groupBox5.Controls.Add(this.textBox11);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.grdLista);
-            this.groupBox5.Location = new System.Drawing.Point(34, 43);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(627, 365);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Información de pasajeros ";
-            // 
-            // txtNombrePasajero
-            // 
-            this.txtNombrePasajero.Location = new System.Drawing.Point(212, 96);
-            this.txtNombrePasajero.Name = "txtNombrePasajero";
-            this.txtNombrePasajero.Size = new System.Drawing.Size(274, 20);
-            this.txtNombrePasajero.TabIndex = 4;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(126, 47);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 3;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(25, 47);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(73, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Identificación:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(25, 99);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(164, 13);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "Ingrese el nombre de funcionario:";
-            // 
-            // grdLista
-            // 
-            this.grdLista.AllowUserToAddRows = false;
-            this.grdLista.AllowUserToDeleteRows = false;
-            this.grdLista.AllowUserToResizeColumns = false;
-            this.grdLista.AllowUserToResizeRows = false;
-            this.grdLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Nombre,
-            this.apellido2,
-            this.Column4,
-            this.Column5,
-            this.telefono1,
-            this.telefono2,
-            this.Column3,
-            this.Column6});
-            this.grdLista.Location = new System.Drawing.Point(28, 153);
-            this.grdLista.Name = "grdLista";
-            this.grdLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdLista.Size = new System.Drawing.Size(593, 150);
-            this.grdLista.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "id_Cedula";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "NombreCompleto";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 400;
-            // 
-            // apellido2
-            // 
-            this.apellido2.DataPropertyName = "apellido1";
-            this.apellido2.HeaderText = "Primer Apellido";
-            this.apellido2.Name = "apellido2";
-            this.apellido2.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "apellido2";
-            this.Column4.HeaderText = "Segundo Apellido";
-            this.Column4.Name = "Column4";
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Nombre";
-            this.Column5.HeaderText = "nombre";
-            this.Column5.Name = "Column5";
-            this.Column5.Visible = false;
-            // 
-            // telefono1
-            // 
-            this.telefono1.DataPropertyName = "telefono1";
-            this.telefono1.HeaderText = "Telefono(1)";
-            this.telefono1.Name = "telefono1";
-            this.telefono1.Visible = false;
-            // 
-            // telefono2
-            // 
-            this.telefono2.DataPropertyName = "telefono2";
-            this.telefono2.HeaderText = "Telefono(2)";
-            this.telefono2.Name = "telefono2";
-            this.telefono2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "email";
-            this.Column3.HeaderText = "email";
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "existe";
-            this.Column6.HeaderText = "existe";
-            this.Column6.Name = "Column6";
-            this.Column6.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(204, 590);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(271, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "*Seleccione los botones para agregar o cancelar la gira:";
             // 
             // FrmSolicitudGira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 636);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Name = "FrmSolicitudGira";
             this.Text = "Solicitud de Gira";
             this.Load += new System.EventHandler(this.FrmSolicitudGira_Load);
@@ -973,11 +772,8 @@ namespace Proyecto_POO_MitziVargas
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLugaresVisita)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdLista)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1006,7 +802,6 @@ namespace Proyecto_POO_MitziVargas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtIdGira;
         private System.Windows.Forms.Label label10;
@@ -1037,35 +832,16 @@ namespace Proyecto_POO_MitziVargas
         private System.Windows.Forms.DataGridViewTextBoxColumn lugar;
         private System.Windows.Forms.DataGridViewTextBoxColumn canton;
         private System.Windows.Forms.DataGridViewTextBoxColumn distrito;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtNombrePasajero;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DataGridView grdLista;
         private System.Windows.Forms.Button btnAgregarLugares;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btnCancelarVehiculo;
         private System.Windows.Forms.Button btnBuscarVehiculo;
         private System.Windows.Forms.TextBox txtVehiculo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Button btnVerTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHoraLlegada;
         private System.Windows.Forms.TextBox txtHoraSalida;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label4;
     }
 }

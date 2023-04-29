@@ -19,7 +19,7 @@ namespace Proyecto_POO_MitziVargas
         //variables globales
         //private int id_Placa = 0;
         private int id_PlacaVehiculo = 0;
-       
+        private string estado = "";
         public FrmVehiculo()
         {
             InitializeComponent();
@@ -51,8 +51,17 @@ namespace Proyecto_POO_MitziVargas
                 if (grdLista.SelectedRows.Count > 0)
                 {
                     id_PlacaVehiculo = Convert.ToInt32(grdLista.SelectedRows[0].Cells[1].Value);
-                    Aceptar(id_PlacaVehiculo, null);
-                    Close();
+                    estado = grdLista.SelectedRows[0].Cells[10].Value.ToString();
+
+                    if (estado != "Disponible")
+                    {
+                        MessageBox.Show("El vehículo seleccionado no se encuentra disponible (" + estado + ")", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        Aceptar(id_PlacaVehiculo, null);
+                        Close();
+                    }
                 }
             }
             catch (Exception e)
@@ -88,7 +97,7 @@ namespace Proyecto_POO_MitziVargas
         private void btnSalir_Click(object sender, EventArgs e)
         {
             id_PlacaVehiculo = -1;
-            Aceptar(id_Placa, null);
+            Aceptar(id_PlacaVehiculo, null);
             Close();
         }
 

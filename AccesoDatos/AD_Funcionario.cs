@@ -27,7 +27,7 @@ namespace AccesoDatos
             SqlCommand comando = new SqlCommand();
             comando.Connection = cnn;
             SqlDataReader informacionDatos;
-            string sentencia = "Select id_Cedula,nombre,apellido1,apellido2,telefono1,telefono2,email from Funcionario";
+            string sentencia = "Select id_Cedula,nombre,apellido1,apellido2,telefono1,telefono2,email,estado from Funcionario";
             if (!string.IsNullOrEmpty(realizarCon))
             {
                 sentencia = $"{sentencia} where {realizarCon}";
@@ -47,6 +47,7 @@ namespace AccesoDatos
                     funcionarios.Telefono1 = informacionDatos.GetString(4);
                     funcionarios.Telefono2 = informacionDatos.GetString(5);
                     funcionarios.Email = informacionDatos.GetString(6);
+                    funcionarios.Estado = informacionDatos.GetString(7);
                     funcionarios.Existe = true;
                 }
                 cnn.Close();
@@ -69,7 +70,7 @@ namespace AccesoDatos
             SqlDataAdapter adapter;
             List<Funcionario> funcionarios = new List<Funcionario>();
 
-            string sentencia = "Select id_Cedula,nombre,apellido1,apellido2,telefono1,telefono2,email from Funcionario";
+            string sentencia = "Select id_Cedula,nombre,apellido1,apellido2,telefono1,telefono2,email,estado from Funcionario";
             if (!string.IsNullOrEmpty(condicion))
             {
                 sentencia = $"{sentencia} where {condicion}";
@@ -91,6 +92,7 @@ namespace AccesoDatos
                                     Telefono1 = registro[4].ToString(),
                                     Telefono2 = registro[5].ToString(),
                                     Email = registro[6].ToString(),
+                                    Estado = registro[7].ToString(),
                                     Existe = true
                                 }
                            ).ToList();

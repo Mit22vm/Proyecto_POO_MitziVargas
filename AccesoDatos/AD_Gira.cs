@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
-
+using Entidades;
+using System.Data;
+using System.Linq;
 
 namespace AccesoDatos
 {
@@ -43,5 +45,11 @@ namespace AccesoDatos
 
             return numGiras;
         }//fin función
+
+        //----------------------------------------------------------------------
+
+        //INSERTAR LA GIRA 
+        
+
     }
 }

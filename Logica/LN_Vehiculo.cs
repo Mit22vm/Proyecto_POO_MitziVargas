@@ -18,7 +18,7 @@ namespace Logica
 
         public LN_Vehiculo(string getConnectionString)
         {
-            _cadenaConexion = string.Empty;
+            _cadenaConexion = getConnectionString;
         }
 
         //Obtener los vehiculos
@@ -29,6 +29,7 @@ namespace Logica
             try
             {
                 resultado = AccesoDatos.ObtenerVehiculo(condicion);
+
             }
             catch (Exception e)
             {

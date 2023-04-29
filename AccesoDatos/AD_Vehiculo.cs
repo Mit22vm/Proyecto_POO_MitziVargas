@@ -11,7 +11,7 @@ namespace AccesoDatos
     public class AD_Vehiculo
     {
 
-        private string _cadenaConexion = "Data Source=DESKTOP-BQM0IO4;Initial Catalog=FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZI;Integrated Security=True";
+        private string _cadenaConexion = "";
         private int id_Placa;
 
         public AD_Vehiculo(string cadenaConexion)
@@ -22,7 +22,7 @@ namespace AccesoDatos
         public Vehiculo ObtenerVehiculo(string condicion)
         {
             Vehiculo vehiculo = new Vehiculo();
-            SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-BQM0IO4;Initial Catalog=FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZI;Integrated Security=True");
+            SqlConnection cnn = new SqlConnection(_cadenaConexion);
             SqlCommand comando = new SqlCommand();
             comando.Connection = cnn;
             SqlDataReader datos;
@@ -72,7 +72,7 @@ namespace AccesoDatos
         public List<Vehiculo> ListarVehiculos(string condicion = "")
         {
             DataSet datos = new DataSet();
-            SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-BQM0IO4;Initial Catalog=FLOTA_VEHICULAR_BD_PROYECTO_POO_MITZI;Integrated Security=True");
+            SqlConnection cnn = new SqlConnection(_cadenaConexion);
             
             SqlDataAdapter adapter = new SqlDataAdapter();
 

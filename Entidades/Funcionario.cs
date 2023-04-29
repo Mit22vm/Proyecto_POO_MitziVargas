@@ -15,6 +15,7 @@ namespace Entidades
         private string telefono2;
         private string email;
         private bool existe;
+        private string estado;
 
         public string NombreCompleto
         {
@@ -64,6 +65,11 @@ namespace Entidades
             get => existe;
             set => existe = value;
         }
+        public string Estado
+        {
+            get => estado;
+            set => estado = value;
+        }
 
         //Método constructor vacío
         public Funcionario()
@@ -75,6 +81,7 @@ namespace Entidades
             telefono1 = string.Empty;
             telefono2 = string.Empty;
             email = string.Empty;
+            estado = string.Empty;
         }
     }
 }
